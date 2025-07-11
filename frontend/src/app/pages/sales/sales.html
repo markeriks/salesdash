@@ -1,0 +1,34 @@
+<div class="sales-container">
+  <h2>Your Sales Entries</h2>
+
+  <table *ngIf="sales.length > 0">
+    <thead>
+      <tr>
+        <th>Row No</th>
+        <th>Order Date</th>
+        <th>Country</th>
+        <th>Product ID</th>
+        <th>Category</th>
+        <th>Product Name</th>
+        <th>Cost per Unit</th>
+        <th>Units Sold</th>
+        <th>Sale Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of sales">
+        <td>{{ entry.rowNo }}</td>
+        <td>{{ entry.orderDate | date:'dd.MM.yyyy' }}</td>
+        <td>{{ entry.country }}</td>
+        <td>{{ entry.productId }}</td>
+        <td>{{ entry.category }}</td>
+        <td>{{ entry.productName }}</td>
+        <td>{{ entry.costPerUnit }} €</td>
+        <td>{{ entry.unitsSold }}</td>
+        <td>{{ entry.salePrice }} €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="sales.length === 0">No sales data found.</p>
+</div>

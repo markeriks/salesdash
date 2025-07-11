@@ -1,0 +1,38 @@
+form {
+    margin-left: 20px;
+    
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    margin-top: 5px;
+    height: 25px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(183, 183, 183);
+    outline: none;
+    padding: 0 10px;
+}
+
+button {
+    margin-top: 10px;
+    border: none;
+    background-color: #0d005f;
+    padding: 6px 30px;
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup {
+    margin-left: 18px;
+}
+
+.signup a {
+    cursor: pointer;
+}

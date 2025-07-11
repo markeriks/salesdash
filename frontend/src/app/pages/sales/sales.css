@@ -1,0 +1,9 @@
+.sales-container {
+    padding: 20px;
+}
+
+.sales-container table th,
+.sales-container table td {
+  padding: 8px 12px;
+  text-align: left;
+}
