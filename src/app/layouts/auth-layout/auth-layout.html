@@ -1,0 +1,16 @@
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <div class="brand">
+            <img class="logo" src="assets/images/logo.svg" alt="Logo image">
+            <p>SalesDash</p>
+        </div>
+        <div class="heading">
+            <h1 *ngIf="router.url.includes('login')">Holla,<br>Welcome back</h1>
+            <h1 *ngIf="router.url.includes('signup')">New here?<br>You're in the right place.</h1>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="auth-card">
+        <img class="auth-img" src="assets/images/auth-img.png" alt="Authentication screen image">
+    </div>
+</div>

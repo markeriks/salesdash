@@ -1,0 +1,18 @@
+<div class="landing">
+    <div class="hero">
+        <div class="navigation">
+            <div></div>
+            <div class="nav">
+                <img src="assets/images/logo.svg" alt="Logo image">
+                <p>{{ name }}</p>
+            </div>
+            <button type="button" routerLink="/signup">Sign Up</button>
+        </div>
+        <h1>{{ title }}</h1>
+    </div>
+    
+    <div class="hero-login">
+        <input type="email" [(ngModel)]="email" placeholder="Your email" required>
+        <button type="button" (click)="goToLogin()">Login</button>
+    </div>
+</div>
