@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.css'
 })
 export class Dashboard {
+
+  private baseUrl = environment.apiUrl;
+
   selectedFile: File | null = null;
   metrics: any = null;
 
@@ -34,7 +38,7 @@ export class Dashboard {
       'Authorization': `Bearer ${token}`
     });
 
-    this.http.post('http://localhost:8080/api/upload', formData, {
+    this.http.post(`${this.baseUrl}/api/upload`, formData, {
       headers: headers,
       withCredentials: true
     }).subscribe({
@@ -54,7 +58,7 @@ export class Dashboard {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-    this.http.get('http://localhost:8080/api/dashboard/metrics', {
+    this.http.get(`${this.baseUrl}/api/dashboard/metrics`, {
       headers: headers,
       withCredentials: true
     }).subscribe({

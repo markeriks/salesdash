@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,9 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
   styleUrl: './login.css'
 })
 export class Login {
+
+  private baseUrl = environment.apiUrl;
+
   email = '';
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {
@@ -23,7 +27,7 @@ export class Login {
     const {email, password} = loginForm.value;
 
     console.log("Sending login", email, password)
-    const url = 'http://localhost:8080/api/auth/login';
+    const url = `${this.baseUrl}/api/auth/login`;
 
     this.http.post<{ token: string }>(url,
       {
