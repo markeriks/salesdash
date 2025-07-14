@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://placeholder-api-url.com'
+  apiUrl: 'https://salesdash-backend-7nza.onrender.com'
 };
