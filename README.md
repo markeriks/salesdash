@@ -8,6 +8,8 @@ A full-stack web application that allows authenticated users to upload their sal
 
 The application is fully cloud-hosted, making it accessible to anyone with an internet connection. The backend is containerized using Docker for streamlined cloud deployment, and both the frontend and backend are hosted on Render.
 
+(First login/signup might take a couple of minutes due to cold start on Render)
+
 🔗 **Live Demo**: [Click here to view the application](https://salesdash-n2cu.onrender.com/)
 
 ---
